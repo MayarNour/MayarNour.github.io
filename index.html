@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Wheel of Fortune Bingo</title>
+    <title>Inovvation & D4E Kickoff</title>
     <link
       rel="canonical"
       href="https://getbootstrap.com/docs/5.2/examples/modals/"
@@ -137,8 +137,9 @@ SOFTWARE.
       margin: 0 auto;
       text-align: center;
       position: absolute;
-      width: 100%;
+      width: 50%;
       height: 100%;
+      margin-left: 25%;
     }
   </style>
   <div
@@ -150,37 +151,7 @@ SOFTWARE.
     <div class="modal-dialog" role="document">
       <div class="modal-content rounded-4 shadow">
         <div class="modal-body p-5">
-          <h2 class="fw-bold mb-0">What's new</h2>
-
-          <ul class="d-grid gap-4 my-5 list-unstyled">
-            <li class="d-flex gap-4">
-              <svg class="bi text-muted flex-shrink-0" width="48" height="48">
-                <use xlink:href="#grid-fill" />
-              </svg>
-              <div>
-                <h5 class="mb-0">Grid view</h5>
-                Not into lists? Try the new grid view.
-              </div>
-            </li>
-            <li class="d-flex gap-4">
-              <svg class="bi text-warning flex-shrink-0" width="48" height="48">
-                <use xlink:href="#bookmark-star" />
-              </svg>
-              <div>
-                <h5 class="mb-0">Bookmarks</h5>
-                Save items you love for easy access later.
-              </div>
-            </li>
-            <li class="d-flex gap-4">
-              <svg class="bi text-primary flex-shrink-0" width="48" height="48">
-                <use xlink:href="#film" />
-              </svg>
-              <div>
-                <h5 class="mb-0">Video embeds</h5>
-                Share videos wherever you go.
-              </div>
-            </li>
-          </ul>
+          <h2 class="fw-bold mb-0" id="para">here</h2>
           <button
             type="button"
             class="btn btn-lg btn-primary mt-5 w-100"
@@ -226,38 +197,40 @@ SOFTWARE.
         {
           label: 'Giveaway',
           value: 1,
-          question:
-            'Horraay!! Screenshot this to win a giveaway during our Kickoff event on the 5th of DEC',
+          question: `Horraay!!\
+             \n \n\t\rScreenshot this to win a giveaway \n during our Kickoff event on the 5th of DEC`,
         }, // padding
         {
           label: 'Food Voucher',
           value: 1,
-          question:
-            'Horraay!! Screenshot this to win extra voucher during our Kickoff event on the 5th of DEC',
+          question: `Horraay!! \
+            \n\n \n\t\rScreenshot this to win extra voucher \n during our Kickoff event on the 5th of DEC`,
         }, //font-family
         {
           label: 'Hard luck',
           value: 1,
-          question:
-            'No worries! Join us in our Kickoff event on the 5th of DEC to win giveaways',
+          question: `No worries! 
+            \n\t\r Join us in our Kickoff event \n on the 5th of DEC to win giveaways`,
         }, //color
         {
           label: 'Giveaway',
           value: 1,
-          question:
-            'Horraay!! Screenshot this to win a giveaway during our Kickoff event on the 5th of DEC',
+          question: `Horraay!! \n\t\r
+            Screenshot this 
+            to win a giveaway during our Kickoff event on the 5th of DEC`,
         }, //font-weight
         {
           label: 'Food Voucher',
           value: 1,
-          question:
-            'Horraay!! Screenshot this to win extra voucher during our Kickoff event on the 5th of DEC',
+          question: `Horraay!! \n\t\r
+            Screenshot this to win extra 
+            voucher during our Kickoff event on the 5th of DEC`,
         }, //font-size
         {
           label: 'Hard luck',
           value: 1,
-          question:
-            'No worries! Join us in our Kickoff event on the 5th of DEC to win giveaways',
+          question: `No worries! 
+            \n\t\rJoin us in our Kickoff event on the 5th of DEC to win giveaways`,
         }, //background-color
       ]
 
@@ -363,9 +336,11 @@ SOFTWARE.
             document.getElementById('modalTour').className = 'visibile'
             document.getElementById('chart').className = 'invisibile'
           }, 3000)
+          let popup = document.getElementById('para')
+          console.log(data[picked].question)
+          popup.innerHTML = data[picked].question
         }
       }
-
       //make arrow
       svg
         .append('g')
