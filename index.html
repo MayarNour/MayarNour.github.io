@@ -156,8 +156,9 @@ SOFTWARE.
             type="button"
             class="btn btn-lg btn-primary mt-5 w-100"
             data-bs-dismiss="modal"
+            id="Registeration"
           >
-            Great, thanks!
+            Save the Screenshot & Register Now!
           </button>
         </div>
       </div>
@@ -339,6 +340,11 @@ SOFTWARE.
           let popup = document.getElementById('para')
           console.log(data[picked].question)
           popup.innerHTML = data[picked].question
+          let registerButton = document.getElementById('Registeration')
+          registerButton.onclick = function () {
+            window.location =
+              'https://docs.google.com/forms/d/e/1FAIpQLScByocRJTMhJmkUbnd4KzdXKorcj8mq77hCnWtT5_T1yY6pvg/viewform?usp=sharing'
+          }
         }
       }
       //make arrow
